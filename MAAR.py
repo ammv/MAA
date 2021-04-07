@@ -86,6 +86,17 @@ values_dict = get_dict(text)
 recomp_text = recomp(text[start_text(text):])
 text_list = text_to_values(values_dict, recomp_text)
 text = values_to_str(text_list)
-print(text)
+
+with open('kto.txt', encoding='utf-8') as f:
+    x = f.read()
+
+with open('kto_maar.txt', 'w', encoding='utf-8') as f:
+    f.write(text)
+
+for i in range(len(text)):
+    if text[i] != x[i]:
+        print(text[i], x[i], i)
+    else:
+        print(True, i)
 
         

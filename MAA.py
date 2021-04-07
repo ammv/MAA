@@ -44,7 +44,7 @@ def add_comp(text):
                     skip = True
                     new_text += text[i]     
                 else:
-                    if i+1 < len(text):
+                    if i+1< len(text):
                         if text[i] == text[i+1]:
                             k = i+1
                             while text[i] == text[k] and k <= len(text):
@@ -53,6 +53,8 @@ def add_comp(text):
                             j = k - 1
                         else:
                             new_text += text[i]
+                    else:
+                        new_text += text[i]
                     
     return new_text
                         
